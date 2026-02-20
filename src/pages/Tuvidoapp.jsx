@@ -271,6 +271,7 @@ function Footer({ navigate }) {
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
             <Link className="footer-link" to="/privacy-policy">Privacy Policy</Link>
             <Link className="footer-link" to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link className="footer-link" to="/refund-policy">Refund Policy</Link>
             <button className="footer-link" onClick={() => navigate("contact")}>Contact Us</button>
           </div>
         </div>

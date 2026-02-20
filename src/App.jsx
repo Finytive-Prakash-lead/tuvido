@@ -10,6 +10,9 @@ import TermsAndConditions from './pages/Terms'
 import PrivacyPolicy from './pages/Privacy'
 // import Contact from './pages/Contact'
 import ScrollToTop from './pages/ScrollToTop'
+import RefundPolicy from './pages/RefundPolicy'
+import NotFound from './pages/NotFound'
+
 
 function App() {
 
@@ -24,10 +27,11 @@ function App() {
           {/* <Route path="contact-us" element={<Contact />} /> */}
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="refund-policy" element={<RefundPolicy />} />
         {/* </Route> */}
 
         {/* Not Found — outside MainLayOut */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
