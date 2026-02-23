@@ -276,8 +276,8 @@ function Footer({ navigate }) {
           </div>
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: 24, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-          <span style={{ fontSize: 13, color: "#3A4255" }}>© 2025 Tuvido. All rights reserved.</span>
-          {/* <span style={{ fontSize: 13, color: "#3A4255" }}>Built with 🐦 Flutter · hello@tuvido.app</span> */}
+          <span style={{ fontSize: 13, color: "#ffffff" }}>Tuvido™ is owned, developed, and operated by Finytive Private Limited.</span>
+          <span style={{ fontSize: 13, color: "#ffffff" }}>© 2026 Finytive Private Limited. All rights reserved.</span>
         </div>
       </div>
     </footer>
@@ -323,6 +323,9 @@ function HomePage({ navigate, setActiveSection }) {
             </h1>
             <p style={{ fontSize: 18, color: "#8892A8", lineHeight: 1.7, marginTop: 28, marginBottom: 40, maxWidth: 520 }}>
               Tuvido streamlines student administration, attendance tracking, fee collection, and parent engagement — all in one powerful mobile app.
+            </p>
+            <p style={{ fontSize: 18, color: "#8892A8", lineHeight: 1.7, marginTop: 28, marginBottom: 40, maxWidth: 520 }}>
+              Tuvido is developed and operated by Finytive Private Limited, a technology company focused on building innovative digital solutions for educational and workforce management sectors.
             </p>
             <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
               <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tuvido.Tuvido&hl=en_IN" className="cta-primary">Download App</a>
