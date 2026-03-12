@@ -1,40 +1,42 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-// import TuvidoApp from './pages/Tuvidoapp'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import MainLayOut from './components/MainLayOut'
-import Home from './pages/Tuvidoapp'
-import TermsAndConditions from './pages/Terms'
-import PrivacyPolicy from './pages/Privacy'
-// import Contact from './pages/Contact'
-import ScrollToTop from './pages/ScrollToTop'
-import RefundPolicy from './pages/RefundPolicy'
-import NotFound from './pages/NotFound'
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayOut from "./layout/MainLayOut";
+import Home from "./page/Home";
+import ContactSection from "./page/Contact";
+import GetQuoteForm from "./page/Pricing";
+import Features from "./page/Features";
+import About from "./page/About";
+import ScrollToTop from "./component/ScrollToTop";
+import TermsAndCondition from "./page/TermsAndConditions";
+import PrivacyPolicys from "./page/PrivacyPolicy";
+import ScrollProgressBar from "./component/progressbar/ScrollProgressBar";
+import RefundPolicys from "./page/RefundPolicy";
+import NotFound from "./component/NotFound";
 function App() {
-
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollProgressBar />
+
 
       <Routes>
-        {/* Layout Routes */}
-        {/* <Route path="/" element={<MainLayOut />}> */}
+        <Route path="/" element={<MainLayOut />}>
           <Route index element={<Home />} />
-          {/* <Route path="contact-us" element={<Contact />} /> */}
-          <Route path="privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="refund-policy" element={<RefundPolicy />} />
-        {/* </Route> */}
+          <Route path="contact" element={<ContactSection />} />
+          <Route path="pricing" element={<GetQuoteForm />} />
+          <Route path="features" element={<Features />} />
+          <Route path="about" element={<About />} />
+          <Route path="terms-and-conditions" element={<TermsAndCondition />} />
+          <Route path="privacy-policy" element={<PrivacyPolicys />} />
+          <Route path="refund-policy" element={<RefundPolicys />} />
 
-        {/* Not Found — outside MainLayOut */}
-        <Route path="*" element={<NotFound />} />
+          {/* 404 Route (always last) */}
+          <Route path="*" element={<NotFound />} />
+
+        </Route>
+
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

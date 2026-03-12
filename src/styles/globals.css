@@ -1,0 +1,122 @@
+:root {
+  --primary: #7C3AED;
+  --primary-dark: #6D28D9;
+  --accent: #AD46FF;
+  --text-light: #ffffff;
+}
+
+
+
+root {
+    --text-color-primary: #05020a;
+    --text-color-secondary: #361968;
+    --color-grey: #696969;
+    --color-grey-lighter: #d4dff3;
+    --color-black: #000;
+    --color-white: #fff;
+    --button-color-primary: #5e2b9d;
+    --button-color-primary-dark: #361968;
+    --button-color-secondary: #07c3de;
+    --button-color-tertiary: #dfd8eb;
+    --primary-color-variant-one: #21153d;
+    --primary-color-variant-two: #5838a3;
+    --black-color-variant-one: #3d3256;
+}
+
+/* Bubble Animation */
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-150px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-bubble {
+  animation: bubble linear infinite;
+}
+
+/* hero animation */
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+
+/* ribbon styles - add after your Tailwind imports */
+.ribbon {
+  /* the ribbon container: skewed and rotated so it crosses the hero */
+  transform: rotate(-20deg) scale(1.05);
+}
+
+/* the visible strip */
+.ribbon-strip {
+  background: linear-gradient(90deg, rgb(200, 11, 237) 0%, rgb(170, 5, 235) 100%);
+  padding: 0.55rem 1.6rem;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.12);
+  transform: skewX(-10deg);
+  overflow: hidden;
+  min-width: 480px;
+}
+
+/* marquee that repeats the label text */
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
+}
+
+/* Duplicate the text so the loop feels continuous */
+.marquee::after {
+  content: " NEW SPORTS COLLECTION • NEW SPORTS COLLECTION • NEW SPORTS COLLECTION • ";
+}
+
+/* marquee keyframes */
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* -50% works well when text duplicated */
+}
+
+.marker {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: #111827;
+}
+
+.marker::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 8px;
+  background: #fde047;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: markerSwipe 1.2s ease forwards;
+}
+
+@keyframes markerSwipe {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+
