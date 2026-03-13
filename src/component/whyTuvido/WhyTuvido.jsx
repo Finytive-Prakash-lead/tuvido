@@ -49,7 +49,7 @@ export default function MerchantDevices() {
       <VideoBackground />
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 <h1 className="text-center text-white pb-10 text-6xl font-black  group cursor-default">
-  Powerfull
+  Powerful
   <span className=" bg-clip-text text-transparent bg-gradient-to-r from-[#AD46FF] to-[#7C3AED]
                    transition-all duration-500 group-hover:scale-110 transform-gpu">
     &nbsp; Features

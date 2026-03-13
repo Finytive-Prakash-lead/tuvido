@@ -8,7 +8,7 @@ const HeroBanner = () => {
       {/* Background Decorative Element - Soft Gradient fade like the screenshot */}
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-100/50 via-transparent to-transparent pointer-events-none" />
 
-      <div className="    px-6  lg:px-12 w-full relative z-10">
+      <div className="max-w-7xl    px-6  lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {/* RIGHT SIDE: ILLUSTRATION */}
@@ -56,7 +56,7 @@ const HeroBanner = () => {
 
                       <div className="hidden md:flex items-center mt-5">
            <a
-  // href="/login"
+   href="/pricing"
   className="relative group px-10 py-3 text-sm font-bold text-white 
 bg-gradient-to-r from-[#2A0047] via-[#7C3AED] to-[#2A0047] bg-[length:200%_auto] bg-right hover:bg-left             rounded-lg 
              overflow-hidden transition-all duration-300 cursor-pointer"
@@ -90,8 +90,6 @@ bg-gradient-to-r from-[#2A0047] via-[#7C3AED] to-[#2A0047] bg-[length:200%_auto]
   `}</style>
 </a>
           </div>
-
-            
 
           </motion.div>
 

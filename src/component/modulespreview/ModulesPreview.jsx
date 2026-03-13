@@ -118,7 +118,7 @@ export default function GlassNewsGrid() {
           {newsItems.map((item) => (
             <div
               key={item.id}
-              className="group relative h-[250px] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 cursor-pointer"
+              className="group relative h-[250px] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 "
             >
               {/* Background Image */}
               <img

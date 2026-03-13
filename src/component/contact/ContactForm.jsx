@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin, Send } from "lucide-react";
-
+import { Mail, Phone, MapPin, Instagram, Youtube, Facebook, Send } from "lucide-react";
 export default function ContactSection() {
   const contactInfo = [
     {
@@ -100,7 +99,7 @@ export default function ContactSection() {
 
     {/* Instagram */}
     <a
-      href="#"
+      href="https://www.instagram.com/tuvido_official?igsh=MWYyeWQ1dDdxbHE1eg=="
       className="w-10 h-10 flex items-center justify-center rounded-xl 
       bg-[#FDF2F5] text-[#E4405F] border border-[#FAD1DA]
       hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F]
@@ -111,7 +110,7 @@ export default function ContactSection() {
 
     {/* YouTube */}
     <a
-      href="#"
+      href="https://youtube.com/@tuvido-official?si=O41ASej284kpK-5Q"
       className="w-10 h-10 flex items-center justify-center rounded-xl 
       bg-[#FFF1F1] text-[#FF0000] border border-[#FFD6D6]
       hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000]
@@ -121,15 +120,15 @@ export default function ContactSection() {
     </a>
 
     {/* LinkedIn */}
-    <a
-      href="#"
-      className="w-10 h-10 flex items-center justify-center rounded-xl 
-      bg-[#F0F7FF] text-[#0A66C2] border border-[#D6E9FF]
-      hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2]
-      transition-all duration-300"
-    >
-      <Linkedin size={18} />
-    </a>
+<a
+   href="https://www.facebook.com/profile.php?id=61582172183766"
+  className="w-10 h-10 flex items-center justify-center rounded-xl 
+  bg-[#F0F7FF] text-[#1877F2] border border-[#D6E9FF]
+  hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]
+  transition-all duration-300"
+>
+  <Facebook size={18} />
+</a>
 
   </div>
 </div>

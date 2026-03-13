@@ -9,7 +9,7 @@ const FeatureBanner = () => {
       {/* Background Gradient */}
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-purple-100/50 via-transparent to-transparent pointer-events-none" />
 
-      <div className=" px-6 lg:px-12 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
 

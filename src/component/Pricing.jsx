@@ -24,7 +24,7 @@ const plans = [
   },
   {
     name: "Starter",
-    price: "1,499",
+    price: "15",
     features: [true, true, true, true, true, true, true, true, true, true],
     popular: true
   }

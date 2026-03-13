@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 // Assuming logo is your primary phone mockup or app screenshot
 import logo from "../assets/hero.png";
+import ComingSoonModal from "./ComingSoonModal";
+
+
+
 
 const StudentMobileApp = () => {
+  const [open, setOpen] = useState(false);
+
+
   return (
+    <>
     <section
       id="mobile-app-student"
-      className="relative py-2  lg:py-4 w-full  px-6 lg:px-12 overflow-hidden bg-white"
+      className="relative py-2  lg:py-4 w-full max-w-7xl mx-auto px-6 lg:px-12 overflow-hidden bg-white"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
@@ -52,7 +60,7 @@ const StudentMobileApp = () => {
               ))}
             </div> */}
 
-<div className="grid sm:grid-cols-2 gap-y-4 gap-x-6">
+<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6">
   {[
     {
       text: "Real-time Attendance",
@@ -72,15 +80,7 @@ const StudentMobileApp = () => {
         </svg>
       )
     },
-    {
-      text: "Live Class Access",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <rect x="3" y="7" width="15" height="10" rx="2"></rect>
-          <path d="M21 7l-4 3v4l4 3z"></path>
-        </svg>
-      )
-    },
+
     {
       text: "Secure Fee Payments",
       icon: (
@@ -106,30 +106,29 @@ const StudentMobileApp = () => {
 
             {/* DOWNLOAD BUTTONS: Modern Glassmorphism/Flat style */}
             <div className="flex flex-wrap gap-4 pb-5">
-                    <a
-                      // href="https://play.google.com/store/search?q=tickora&c=apps"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        src="https://www.jibble.io/wp-content/uploads/2024/10/English-9.png.webp"
-                        alt="Google Play badge"
-                        className="w-40 h-12"
-                      />
-                    </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tuvido.Tuvido&pcampaignid=web_share" target="_blank" rel="noreferrer" className="block active:scale-95 transition">
+                  <img
+                    src="https://www.jibble.io/wp-content/uploads/2024/10/English-9.png.webp"
+                    alt="Google Play"
+                    className="w-40 h-auto"
+                  />
+                </a>
 
                     
-                    <a
-                      // href="https://apps.apple.com/in/app/tickora/id6748251138"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        src="https://www.jibble.io/wp-content/uploads/2024/10/English-11.png.webp"
-                        alt="Mac App Store badge"
-                        className="w-40 h-12"
-                      />
-                    </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(true);
+                  }}
+                  className="block active:scale-95 transition"
+                >
+                  <img
+                    src="https://www.jibble.io/wp-content/uploads/2024/10/English-11.png.webp"
+                    alt="App Store"
+                    className="w-40 h-auto"
+                  />
+                </a>
 
 
 
@@ -191,7 +190,13 @@ const StudentMobileApp = () => {
   
 </div>
     </section>
+
+    {open && <ComingSoonModal onClose={() => setOpen(false)} />}
+
+    </>
   );
 };
 
 export default StudentMobileApp;
+
+

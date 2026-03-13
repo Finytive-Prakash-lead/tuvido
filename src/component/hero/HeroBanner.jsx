@@ -51,10 +51,10 @@ function HeroBanner() {
     <div className="relative w-full min-h-screen bg-white flex items-center overflow-hidden pt-20 lg:pt-0">
       
       {/* Background Glows */}
-      <div className="absolute -top-40 -left-40 w-72 h-72 md:w-96 md:h-96 bg-purple-100 rounded-full blur-[120px] opacity-50"></div>
-      <div className="absolute -bottom-40 -right-40 w-72 h-72 md:w-96 md:h-96 bg-blue-100 rounded-full blur-[120px] opacity-50"></div>
+      {/* <div className="absolute -top-40 -left-40 w-72 h-72 md:w-96 md:h-96 bg-purple-100 rounded-full blur-[120px] opacity-50"></div> */}
+      {/* <div className="absolute -bottom-40 -right-40 w-72 h-72 md:w-96 md:h-96 bg-blue-100 rounded-full blur-[120px] opacity-50"></div> */}
 
-      <div className="container  px-6 lg:px-12 flex flex-col lg:flex-row items-center ">
+      <div className="container px-6 lg:px-12 flex flex-col lg:flex-row items-center ">
         
         {/* LEFT SIDE: CONTENT */}
         <motion.div
@@ -79,12 +79,19 @@ function HeroBanner() {
               {heroData.description}
             </motion.p>
 
-            <motion.div variants={slideUp} className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <a className="relative group px-8 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#2A0047] via-[#7C3AED] to-[#2A0047] bg-[length:200%_auto] bg-right hover:bg-left rounded-xl transition-all duration-500 cursor-pointer shadow-lg shadow-purple-200">
-                <span className="relative z-10 tracking-widest uppercase">Get App </span>
-                <div className="absolute inset-0 animate-pulse bg-white/10 rounded-xl" />
-              </a>
-            </motion.div>
+<motion.div variants={slideUp} className="flex flex-wrap justify-center lg:justify-start gap-4">
+<a
+  onClick={() => {
+    document.getElementById("mobile-app-student")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="relative group px-8 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#2A0047] via-[#7C3AED] to-[#2A0047] bg-[length:200%_auto] bg-right hover:bg-left rounded-xl transition-all duration-500 cursor-pointer shadow-lg shadow-purple-200"
+>
+  <span className="relative z-10 tracking-widest uppercase">Get App</span>
+  <div className="absolute inset-0 animate-pulse bg-white/10 rounded-xl" />
+</a>
+</motion.div>
           </div>
         </motion.div>
 

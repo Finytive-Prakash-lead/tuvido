@@ -1,12 +1,16 @@
 
 
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaInstagram, FaLinkedin, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { Mail, Phone, MapPin, Instagram, Youtube, Facebook, Send } from "lucide-react";
 import logo from "../assets/tuvido.png";
+
+import ComingSoonModal from "./ComingSoonModal";
 
 const Footer = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
+
 
   // Check if current page is Home
   const isHomePage = location.pathname === "/";
@@ -42,10 +46,10 @@ const Footer = () => {
 
       {/* Footer Container */}
       <footer className="w-full border-t border-[#4c1d95] bg-[#21153d] pt-48 md:pt-40 pb-10">
-        <div className="px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Main Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-            
+
             {/* Brand Section */}
             <div className="space-y-4">
               <Link to="/" className="inline-flex items-center gap-3">
@@ -56,13 +60,13 @@ const Footer = () => {
                     alt="Tuvido Logo"
                   />
                 </div>
-                <h1 className="text-2xl font-extrabold text-white tracking-wide">
+                <h1 className="text-2xl font-extrabold bg-clip-text text-transparent bg-clip-text text-transparent bg-gradient-to-r from-[#AD46FF] to-[#7C3AED] tracking-wide">
                   Tuvido
                 </h1>
               </Link>
               <p className="text-white/80 text-sm md:text-base leading-relaxed ">
                 Smart tuition management platform designed for modern institutes.
-                Tuvido helps tuition and activity centers manage students, track 
+                Tuvido helps tuition and activity centers manage students, track
                 attendance, and monitor performance from a single dashboard.
               </p>
             </div>
@@ -109,61 +113,68 @@ const Footer = () => {
                 </li>
                 <li>Chennai, India</li>
               </ul>
-              
+
               {/* Social Icons moved here for better layout balance on mobile */}
-<div className="mt-6 flex items-center gap-5">
-  
-  {/* Instagram */}
-  <a
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white/80 hover:text-[#E4405F] transition-colors duration-300"
-  >
-    <FaInstagram className="h-6 w-6" />
-  </a>
+              <div className="mt-6 flex items-center gap-5">
 
-  {/* YouTube */}
-  <a
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white/80 hover:text-[#FF0000] transition-colors duration-300"
-  >
-    <FaYoutube className="h-6 w-6" />
-  </a>
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/tuvido_official?igsh=MWYyeWQ1dDdxbHE1eg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-[#E4405F] transition-colors duration-300"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
 
-
-      <a
-      href="#"
-          target="_blank"
-    rel="noopener norefer"
-    className="text-white/80 hover:text-[#0A66C2] transition-colors duration-300"
-
-    >
-      <FaLinkedin className="h-6 w-6" />
-    </a>
+                {/* YouTube */}
+                <a
+                  href="https://youtube.com/@tuvido-official?si=O41ASej284kpK-5Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-[#FF0000] transition-colors duration-300"
+                >
+                  <Youtube className="h-6 w-6" />
+                </a>
 
 
-  
+<a
+   href="https://www.facebook.com/profile.php?id=61582172183766"
+                     target="_blank"
+                  rel="noopener noreferrer"
+  className="text-white/80 hover:text-[#1877F2] transition-colors duration-300"
 
-</div>
+>
+  <Facebook className="h-6 w-6"  />
+</a>
+
+
+
+
+              </div>
             </div>
 
             {/* App Download Section */}
-            <div className="flex flex-col">
-              <h3 className="text-base font-semibold uppercase tracking-wider text-white border-b border-white/10 pb-2 mb-4">
+            <div className="flex flex-col cursor-pointer">
+              <h3 className="text-base font-semibold uppercase tracking-wider text-white border-b border-white/10 pb-2 mb-4 ">
                 Download App
               </h3>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-4 mt-2">
-                <a href="#" target="_blank" rel="noreferrer" className="block active:scale-95 transition">
+                <a href="https://play.google.com/store/apps/details?id=com.tuvido.Tuvido&pcampaignid=web_share" target="_blank" rel="noreferrer" className="block active:scale-95 transition">
                   <img
                     src="https://www.jibble.io/wp-content/uploads/2024/10/English-9.png.webp"
                     alt="Google Play"
                     className="w-40 h-auto"
                   />
                 </a>
-                <a href="#" target="_blank" rel="noreferrer" className="block active:scale-95 transition">
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(true);
+                  }}
+                  className="block active:scale-95 transition"
+                >
                   <img
                     src="https://www.jibble.io/wp-content/uploads/2024/10/English-11.png.webp"
                     alt="App Store"
@@ -178,10 +189,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-16">
-          <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center justify-between gap-6 md:flex-row">
-            
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © 2026 <span className="font-semibold text-gray-100">Tuvido</span>. All rights reserved.
+          <div className=" px-6 py-8 flex flex-col items-center justify-between gap-6 md:flex-row">
+
+            <p className="text-gray-400 px-4 text-sm text-center md:text-left">
+              © 2026 <span className="font-semibold bg-clip-text text-transparent bg-clip-text text-transparent bg-gradient-to-r from-[#AD46FF] to-[#7C3AED]">Tuvido</span>. All rights reserved.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs md:text-sm">
@@ -207,6 +218,9 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+
+      {open && <ComingSoonModal onClose={() => setOpen(false)} />}
+
     </div>
   );
 };
